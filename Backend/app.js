@@ -24,6 +24,10 @@ app.use("/api/admin",require('./routes/admin'))
 app.use(errorHandler);
 app.use(cookieParser());
 
+app.get("/", (req, res) => {
+    res.send("Welcome to the server");
+});
+
 app.listen(PORT, () => {
     console.log(`Server is running on ${PORT}`);
 });

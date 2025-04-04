@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js",
-    "dev": "nodemon app.js"
+    "dev": "nodemon app.js",
+    "build": "rimraf dist && mkdir dist && xcopy app.js dist\\ /Y && xcopy config dist\\config\\ /E /I /Y && xcopy controllers dist\\controllers\\ /E /I /Y && xcopy models dist\\models\\ /E /I /Y && xcopy middleware dist\\middleware\\ /E /I /Y && xcopy routes dist\\routes\\ /E /I /Y && xcopy htmlFiles dist\\htmlFiles\\ /E /I /Y && xcopy .env dist\\ /Y && xcopy constants.js dist\\ /Y && xcopy nodeMailer.js dist\\ /Y"
   },
   "author": "Easy Way",
   "license": "ISC",
@@ -23,5 +24,8 @@
     "nodemailer": "^6.9.1",
     "nodemon": "^2.0.22",
     "otp-generator": "^4.0.1"
+  },
+  "devDependencies": {
+    "rimraf": "^6.0.1"
   }
 }

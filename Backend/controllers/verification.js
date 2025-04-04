@@ -200,7 +200,7 @@ const verifyOtp = async (req, res) => {
         const {email, otp} = req.body;
         // getting otp record
         console.log(`${otp} ${email}`);
-       const user = await otpRecord.findOne({ email });
+       const user = await otpRecord.findOne({ email }).sort({ createdAt: -1 });
 
         //verifying the otp
        if(user && (await bcrypt.compare(otp, user.otp))){
