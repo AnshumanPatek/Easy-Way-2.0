@@ -7,7 +7,7 @@ import "../../css/register.css";
 import Select from 'react-select';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { storage } from "../../firebase/config";
+// import { storage } from "../../firebase/config";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage"
 import { useUser } from "../shared/userContext";
 import { baseUrl } from "../shared/baseUrl";
