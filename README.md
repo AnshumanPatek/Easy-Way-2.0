@@ -1,9 +1,5 @@
 # Project Deployment Overview
 
-## Links
-- **Frontend:** [http://52.66.21.23:81/](http://52.66.21.23:81/)
-- **Backend:** [http://43.204.228.9:5000/](http://43.204.228.9:5000/)
-
 ## Deployment Stack
 - **Docker**: Used for containerizing the application (frontend & backend).
 - **Nginx**: Configured as a reverse proxy to route traffic efficiently.
